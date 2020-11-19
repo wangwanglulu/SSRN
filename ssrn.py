@@ -2,9 +2,9 @@ import base64
 import requests
 from bs4 import BeautifulSoup
 
-keywords="people"
-username="wangwanglulu@gmail.com"
-password="opqrst0916"
+keywords="填你要搜索的信息"
+username="填你的用户名"
+password="填你的密码"
 remember="0"
 key=username+"|"+password+"|"+remember
 keyUser=base64.b64encode(key.encode())
