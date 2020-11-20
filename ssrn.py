@@ -39,7 +39,7 @@ else:
     soup_p=BeautifulSoup(first_paper.content, 'lxml')
     info=soup_p.find_all(attrs={"class":"box-container box-abstract-main"})
 
-    #info包含文章所有信息，提取所有作者以及他们的association，还有年份
+    #info包含文章所有信息，提取所有作者以及他们的affiliation，还有年份
     title = info[0].h1.get_text()
     authors = info[0].find_all(attrs={"class":"authors authors-full-width"})
     name=authors[0].find_all(name="h2")
@@ -61,7 +61,7 @@ else:
         short=title.split(' ')[0]
     short_title = name_list[0].split(' ')[-1].lower()+year+short.lower()
     
-    #提取作者的姓和名，做成latex的bib样板
+    #提取作者的姓和名，做成文献引用模板
     authors_l=[]
     for x in name_list:
         surname= x.split(' ')[-1]
