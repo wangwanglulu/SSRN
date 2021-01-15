@@ -90,7 +90,7 @@ else:
     r"  note={\url{"+h_bib+r"}}"+"\n"+\
     r"}"
     bibname = name_list[0]+" "+ year+" "+"SSRN"+".txt"
-    with open(bibname, 'w') as file_object:
+    with open(bibname, 'w', encoding="UTF-8") as file_object:
         file_object.write(bib)
     
     #下载pdf文件
